@@ -1,0 +1,4 @@
+# Configuration placeholder for Better Torch
+settings:
+  enableFeatureX: false
+  placeholder: true

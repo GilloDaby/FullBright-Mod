@@ -1,0 +1,9 @@
+{
+  "id": "fullbright",
+  "name": "Fullbright Mod",
+  "version": "1.1.1",
+  "author": "GilloDaby",
+  "description": "Fullbright lighting boost (always max brightness)",
+  "main": "com.gillodaby.fullbright.FullbrightPlugin",
+  "dependencies": []
+}

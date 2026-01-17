@@ -1,0 +1,16 @@
+{
+  "Group": "GilloDaby",
+  "Name": "Fullbright Mod",
+  "Version": "1.1.1",
+  "Description": "Fullbright lighting boost (always max brightness)",
+  "Authors": [
+    { "Name": "GilloDaby" }
+  ],
+  "Website": "",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "Main": "com.gillodaby.fullbright.FullbrightPlugin",
+  "IncludesAssetPack": true
+}

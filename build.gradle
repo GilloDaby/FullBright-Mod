@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.gillodaby'
+version = '1.1.1'
+
+// Produce a JAR named after the mod for clarity
+tasks.named('jar') {
+    archiveBaseName.set('Fullbright')
+}
+
+// Ensure plugin.json and manifest.json are included at the root of the plugin JAR
+tasks.named('jar') {
+    if (file('plugin.json').exists()) {
+        from('plugin.json') { into '' }
+    }
+    if (file('manifest.json').exists()) {
+        from('manifest.json') { into '' }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Use compileOnly for server API (adjust path if your HytaleServer.jar is located elsewhere)
+    compileOnly files("../libs/HytaleServer.jar")
+}
